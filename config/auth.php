@@ -12,9 +12,13 @@ return [
     | as required, but they're a perfect start for most applications.
     |
     */
-
+    /*
     'defaults' => [
         'guard' => 'web',
+        'passwords' => 'users',
+    ],*/
+    'defaults' => [
+        'guard' => 'api',
         'passwords' => 'users',
     ],
 
@@ -74,11 +78,13 @@ return [
             'driver' => 'eloquent',
             'model' => App\Entity\User::class,
         ],
-
+        
+        /*
         'users' => [
             'driver' => 'database',
             'table' => 'users',
         ],
+        */
     ],
 
     /*
