@@ -44,10 +44,6 @@ class LoginController extends Controller{
             ->withErrors($validator)
             ->withInput(Input::except('password'));
             
-        /*
-        return Redirect::to('login')
-        ->withErrors($validator)
-        ->withInput(Input::except('password'));
-        */
+      
     }
 }
