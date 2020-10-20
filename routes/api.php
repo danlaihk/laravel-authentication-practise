@@ -21,3 +21,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 */
 
 Route::get('/test','UserController@test');
+
+//api login
+Route::post('login','LoginController@apiLogin');
+//api user info
+Route::middleware('auth:api')->get('/user',function(Request $req){
+    error_log($req);
+    return $req->member();
+});
